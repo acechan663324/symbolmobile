@@ -30,7 +30,7 @@
         },
       }
     </script>
-    <!-- Add Babel Standalone for in-browser JSX/TSX transpilation -->
+    <!-- Babel is still used to transpile the single bundled TSX file in the browser -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="importmap">
 {
@@ -45,7 +45,7 @@
 </head>
   <body class="bg-brand-bg text-brand-text">
     <div id="root"></div>
-    <!-- Use a relative path for better deployment compatibility -->
+    <!-- Load the single, bundled application file -->
     <script type="text/babel" data-type="module" src="./index.tsx"></script>
   </body>
 </html>
