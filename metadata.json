@@ -1,0 +1,5 @@
+{
+  "name": "[Web2App]Symbolic Name Generator",
+  "description": "A mobile web app to discover, copy symbols, and use an AI-powered generator to create unique, personalized nicknames for games and social media.",
+  "requestFramePermissions": []
+}
