@@ -3,7 +3,6 @@ import { SYMBOL_CATEGORIES } from '../constants.ts';
 import type { SymbolCategory } from '../types.ts';
 import ClipboardIcon from './icons/ClipboardIcon.tsx';
 import SearchIcon from './icons/SearchIcon.tsx';
-import NicknameGenerator from './NicknameGenerator.tsx';
 
 const CategorySection: React.FC<{ category: SymbolCategory; onCopy: (symbol: string) => void }> = ({ category, onCopy }) => {
   return (
@@ -71,8 +70,8 @@ const SymbolList: React.FC = () => {
 
   return (
     <div className="animate-fade-in">
-       <h2 className="text-2xl font-bold mb-4 text-center">Symbol Library &amp; Generator</h2>
-       <p className="text-brand-subtle text-center mb-6">Create a name with AI, or scroll down to browse and copy symbols.</p>
+       <h2 className="text-2xl font-bold mb-4 text-center">Symbol Library</h2>
+       <p className="text-brand-subtle text-center mb-6">Browse and copy symbols to create your perfect name.</p>
 
         <div className="relative mb-6">
           <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -87,12 +86,6 @@ const SymbolList: React.FC = () => {
             aria-label="Search symbols"
           />
         </div>
-        
-        <div className="mb-8">
-            <NicknameGenerator />
-        </div>
-
-        <hr className="border-brand-primary/20 my-8" />
 
       {filteredCategories.length > 0 ? (
         filteredCategories.map(category => (

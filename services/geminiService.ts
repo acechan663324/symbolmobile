@@ -1,11 +1,4 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
-
-if (!process.env.API_KEY) {
-  throw new Error("API_KEY environment variable is not set.");
-}
-
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 interface GenerateNicknamesParams {
   keyword: string;
@@ -21,6 +14,12 @@ export const generateNicknames = async ({
   platform,
 }: GenerateNicknamesParams): Promise<string[]> => {
   try {
+    if (!process.env.API_KEY) {
+      throw new Error("API_KEY environment variable is not configured.");
+    }
+
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
     const prompt = `You are an expert in creating cool, stylish, and unique nicknames for gamers and social media users.
       Generate 5 distinct nicknames based on the following criteria:
       - Main Keyword: "${keyword}"
@@ -62,6 +61,9 @@ export const generateNicknames = async ({
 
   } catch (error) {
     console.error("Error generating nicknames:", error);
-    throw new Error("Failed to generate nicknames. Please check your API key and try again.");
+    if (error instanceof Error && error.message.includes("API_KEY")) {
+        throw new Error("The AI service is not configured. Please contact the administrator.");
+    }
+    throw new Error("Failed to generate nicknames. Please try again later.");
   }
 };
