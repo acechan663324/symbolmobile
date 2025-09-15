@@ -1,9 +1,9 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { SYMBOL_CATEGORIES } from '../constants';
-import type { SymbolCategory } from '../types';
-import ClipboardIcon from './icons/ClipboardIcon';
-import SearchIcon from './icons/SearchIcon';
-import NicknameGenerator from './NicknameGenerator';
+import { SYMBOL_CATEGORIES } from '../constants.ts';
+import type { SymbolCategory } from '../types.ts';
+import ClipboardIcon from './icons/ClipboardIcon.tsx';
+import SearchIcon from './icons/SearchIcon.tsx';
+import NicknameGenerator from './NicknameGenerator.tsx';
 
 const CategorySection: React.FC<{ category: SymbolCategory; onCopy: (symbol: string) => void }> = ({ category, onCopy }) => {
   return (

@@ -1,7 +1,8 @@
 
+
 import React, { useState, useCallback } from 'react';
-import { generateNicknames } from '../services/geminiService';
-import ClipboardIcon from './icons/ClipboardIcon';
+import { generateNicknames } from '../services/geminiService.ts';
+import ClipboardIcon from './icons/ClipboardIcon.tsx';
 
 const NicknameGenerator: React.FC = () => {
   const [keyword, setKeyword] = useState('');

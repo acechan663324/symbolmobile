@@ -1,9 +1,9 @@
 
 import React from 'react';
-import type { Page } from '../types';
-import SparklesIcon from './icons/SparklesIcon';
-import ListIcon from './icons/ListIcon';
-import TextIcon from './icons/TextIcon';
+import type { Page } from '../types.ts';
+import SparklesIcon from './icons/SparklesIcon.tsx';
+import ListIcon from './icons/ListIcon.tsx';
+import TextIcon from './icons/TextIcon.tsx';
 
 interface BottomNavProps {
   activePage: Page;

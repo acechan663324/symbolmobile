@@ -1,8 +1,9 @@
 
+
 import React, { useState, useCallback } from 'react';
-import { PREMADE_NICKNAMES } from '../constants';
-import type { Nickname } from '../types';
-import ClipboardIcon from './icons/ClipboardIcon';
+import { PREMADE_NICKNAMES } from '../constants.ts';
+import type { Nickname } from '../types.ts';
+import ClipboardIcon from './icons/ClipboardIcon.tsx';
 
 const NicknameCard: React.FC<{ nickname: Nickname; onCopy: (name: string) => void }> = ({ nickname, onCopy }) => {
   return (

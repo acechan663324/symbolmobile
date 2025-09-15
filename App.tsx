@@ -1,6 +1,6 @@
 import React from 'react';
-import SymbolList from './components/SymbolList';
-import NicknameList from './components/NicknameList';
+import SymbolList from './components/SymbolList.tsx';
+import NicknameList from './components/NicknameList.tsx';
 
 const App: React.FC = () => {
   return (

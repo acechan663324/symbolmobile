@@ -1,4 +1,4 @@
-import type { SymbolCategory, Nickname } from './types';
+import type { SymbolCategory, Nickname } from './types.ts';
 
 export const SYMBOL_CATEGORIES: SymbolCategory[] = [
   {
