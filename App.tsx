@@ -1,8 +1,6 @@
-
 import React from 'react';
 import SymbolList from './components/SymbolList';
 import NicknameList from './components/NicknameList';
-import NicknameGenerator from './components/NicknameGenerator';
 
 const App: React.FC = () => {
   return (
@@ -11,7 +9,6 @@ const App: React.FC = () => {
         <div className="space-y-16">
           <SymbolList />
           <NicknameList />
-          <NicknameGenerator />
         </div>
       </main>
     </div>
