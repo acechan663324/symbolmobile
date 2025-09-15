@@ -1,5 +1,3 @@
-export type Page = 'symbols' | 'nicknames' | 'generator';
-
 export interface SymbolCategory {
   name: string;
   symbols: string[];
@@ -10,3 +8,6 @@ export interface Nickname {
   name: string;
   platform: string;
 }
+
+// FIX: Add missing Page type definition.
+export type Page = 'symbols' | 'nicknames' | 'generator';
