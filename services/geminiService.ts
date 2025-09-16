@@ -1,3 +1,4 @@
+
 import { GoogleGenAI, Type } from "@google/genai";
 
 interface GenerateNicknamesParams {
@@ -14,11 +15,14 @@ export const generateNicknames = async ({
   platform,
 }: GenerateNicknamesParams): Promise<string[]> => {
   try {
-    if (!process.env.API_KEY) {
+    // FIX: Safely access the API key to prevent crashing the app in a browser environment.
+    const apiKey = (typeof process !== 'undefined' && process.env) ? process.env.API_KEY : undefined;
+
+    if (!apiKey) {
       throw new Error("API_KEY environment variable is not configured.");
     }
 
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey });
 
     const prompt = `You are an expert in creating cool, stylish, and unique nicknames for gamers and social media users.
       Generate 5 distinct nicknames based on the following criteria:
