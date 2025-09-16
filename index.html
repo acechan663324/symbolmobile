@@ -5,33 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Symbolic Name Generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'brand-bg': '#f9fafb',        // Off-white (was #121212)
-              'brand-surface': '#ffffff',     // White (was #1e1e1e)
-              'brand-primary': '#8b5cf6',      // Violet-500 (was #9333ea)
-              'brand-secondary': '#06b6d4',    // Cyan-500 (was #22d3ee)
-              'brand-text': '#111827',        // Dark Gray (was #e5e7eb)
-              'brand-subtle': '#6b7280',     // Medium Gray (was #6b7280)
-            },
-            animation: {
-              'fade-in': 'fadeIn 0.5s ease-in-out',
-            },
-            keyframes: {
-              fadeIn: {
-                '0%': { opacity: 0, transform: 'translateY(10px)' },
-                '100%': { opacity: 1, transform: 'translateY(0)' },
-              },
-            },
-          },
-        },
-      }
-    </script>
-    <!-- Babel is still used to transpile the single bundled TSX file in the browser -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="importmap">
 {
   "imports": {
